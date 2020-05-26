@@ -1,32 +1,10 @@
-# Glass
+Hello, firstly thanks for looking at this and helping me.
 
-## com.lewispeel.glass
+The effect I'm trying to achieve is a glass refraction effect see [here](https://user-images.githubusercontent.com/4982001/33995822-15de2298-e0d7-11e7-849e-d13cdb34f15e.png).
 
-### Getting started
+I've been given some assets from another developer at Sky who used in the past to create the [same effect](https://medium.com/@beclamide/advanced-realtime-glass-refraction-simulation-with-webgl-71bdce7ab825) using WebGL. I think I have all the pieces but I'm struggling to integrate them into Lightning. I have something working but it's not working as I expect, also the API could be improved. At the moment I've had to create a `Glass` component because I have to create the image textures for diffuse/normal maps on the fly...as I don't think it's nice to have the developer do that every time they want this effect.
 
-> Before you follow the steps below, make sure you have the
-[Lightning-CLI](https://github.com/WebPlatformForEmbedded/Lightning-CLI) installed _globally_ only your system
-
-```
-npm install -g WebPlatformForEmbedded/Lightning-CLI
-```
-
-#### Running the App
-
-1. Install the NPM dependencies by running `npm install`
-
-2. Build the App using the _Lightning-CLI_ by running `lng build` inside the root of your project
-
-3. Fire up a local webserver and open the App in a browser by running `lng serve` inside the root of your project
-
-
-#### Developing the App
-
-During development you can use the **watcher** functionality of the _Lightning-CLI_.
-
-- use `lng watch` to automatically _rebuild_ your App whenever you make a change in the `src` or  `static` folder
-- use `lng dev` to start the watcher and run a local webserver / open the App in a browser _at the same time_
-
-#### Documentation
-
-Use `lng docs` to open up the Lightning-SDK documentation.
+- The effect is pixelated/distorted for some reason.
+- I'd like to use the shader to affect whatever is underneath it (recursively), is that possible?
+- Is there a way to achieve this effect without wrapping the shader in a component?
+- The refraction images are stretched but I'd like to prevent that.
