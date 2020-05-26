@@ -23,7 +23,9 @@ export default class App extends Lightning.Component {
   // Desired API (or something similar), if possible
   // static _template() {
   //   return {
-  //     src: Utils.asset('images/starwars.jpeg'), // or any other lightning texture/component(s)
+  //     // or any other lightning texture/component(s)
+  //     // can it be recursive all the way to the root?
+  //     src: Utils.asset('images/starwars.jpeg'),
   //     shader: {
   //       diffuse: Utils.asset('images/sky-logo-diffuse-map.png'),
   //       normal: Utils.asset('images/sky-logo-refraction-map.png'),
