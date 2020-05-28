@@ -22,14 +22,12 @@ export default class Glass extends Lightning.Component {
     this._normalTexture.src = this.normal
     this._normalTexture.load()
 
-    setTimeout(() => {
-      this.patch({
-        shader: {
-          diffuse: this._diffuseTexture.source,
-          normal: this._normalTexture.source,
-        },
-      })
-    }, 2000)
+    this.patch({
+      shader: {
+        diffuse: this._diffuseTexture.source,
+        normal: this._normalTexture.source,
+      },
+    })
   }
 
 }

@@ -10,8 +10,8 @@ export default class RefractionShader extends Lightning.shaders.WebGLDefaultShad
   setupUniforms(operation) {
     super.setupUniforms(operation);
 
-    this._setUniform('uScrollOffset', 0, this.gl.uniform1f);
-    this._setUniform('uAmount', 0, this.gl.uniform1f);
+    this._setUniform('uScrollOffset', 1, this.gl.uniform1f);
+    this._setUniform('uAmount', 1, this.gl.uniform1f);
     this._setUniform('uDiffuse', 1, this.gl.uniform1i);
     this._setUniform('uNormal', 2, this.gl.uniform1i);
 
@@ -60,15 +60,15 @@ RefractionShader.vertexShaderSource = `
     gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
     vTextureCoord = aTextureCoord;
   }
-`;
+`
 
 RefractionShader.fragmentShaderSource = `
   #ifdef GL_ES
   precision lowp float;
   #endif
 
-  uniform float uScrollOffset;
   uniform float uAmount;
+  uniform float uScrollOffset;
 
   // our textures
   uniform sampler2D uNormal;
